@@ -25,7 +25,7 @@ class Task(Resource):
 
         connection.close()
         if row:
-            return {"desc": row[0], "detail": row[1]}, 200 if row else 404
+            return {"desc": row[0], "detail": row[1]} if row else 404
 
     @classmethod
     def insert_task(cls, task):
